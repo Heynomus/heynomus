@@ -1,0 +1,380 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Heynomus Research API",
+    "version": "1.0.0",
+    "description": "Independent evidence projections. Preserve source links, dates, coverage and unknowns."
+  },
+  "servers": [
+    {
+      "url": "https://heynomus.xyz"
+    }
+  ],
+  "paths": {
+    "/api/projects": {
+      "get": {
+        "summary": "Search/filter catalogue",
+        "responses": {
+          "200": {
+            "description": "Successful read"
+          },
+          "429": {
+            "description": "Rate limited"
+          }
+        },
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "tab",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "kind",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "narrative",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "launchpad",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "has",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "minLiquidity",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "minMarketCap",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxMarketCap",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "minVolume",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "stage",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/api/projects/{slug}": {
+      "get": {
+        "summary": "Project identity",
+        "responses": {
+          "200": {
+            "description": "Successful read"
+          },
+          "429": {
+            "description": "Rate limited"
+          }
+        },
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/api/projects/{slug}/snapshot": {
+      "get": {
+        "summary": "Research brief and coverage",
+        "responses": {
+          "200": {
+            "description": "Successful read"
+          },
+          "429": {
+            "description": "Rate limited"
+          }
+        },
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/api/projects/{slug}/market": {
+      "get": {
+        "summary": "Collected pool readings",
+        "responses": {
+          "200": {
+            "description": "Successful read"
+          },
+          "429": {
+            "description": "Rate limited"
+          }
+        },
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/api/projects/{slug}/usage": {
+      "get": {
+        "summary": "Partial watched-contract calls",
+        "responses": {
+          "200": {
+            "description": "Successful read"
+          },
+          "429": {
+            "description": "Rate limited"
+          }
+        },
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/api/projects/{slug}/contracts": {
+      "get": {
+        "summary": "Contract records",
+        "responses": {
+          "200": {
+            "description": "Successful read"
+          },
+          "429": {
+            "description": "Rate limited"
+          }
+        },
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/api/ships": {
+      "get": {
+        "summary": "Counted development events",
+        "responses": {
+          "200": {
+            "description": "Successful read"
+          },
+          "429": {
+            "description": "Rate limited"
+          }
+        }
+      }
+    },
+    "/api/changes": {
+      "get": {
+        "summary": "Observation ledger",
+        "responses": {
+          "200": {
+            "description": "Successful read"
+          },
+          "429": {
+            "description": "Rate limited"
+          }
+        }
+      }
+    },
+    "/api/signals": {
+      "get": {
+        "summary": "Recorded signals",
+        "responses": {
+          "200": {
+            "description": "Successful read"
+          },
+          "429": {
+            "description": "Rate limited"
+          }
+        }
+      }
+    },
+    "/api/builders": {
+      "get": {
+        "summary": "Heynomus radar",
+        "responses": {
+          "200": {
+            "description": "Successful read"
+          },
+          "429": {
+            "description": "Rate limited"
+          }
+        }
+      }
+    },
+    "/api/this-week": {
+      "get": {
+        "summary": "Weekly report",
+        "responses": {
+          "200": {
+            "description": "Successful read"
+          },
+          "429": {
+            "description": "Rate limited"
+          }
+        }
+      }
+    },
+    "/api/narratives": {
+      "get": {
+        "summary": "Categories",
+        "responses": {
+          "200": {
+            "description": "Successful read"
+          },
+          "429": {
+            "description": "Rate limited"
+          }
+        }
+      }
+    },
+    "/api/health": {
+      "get": {
+        "summary": "Service status",
+        "responses": {
+          "200": {
+            "description": "Successful read"
+          },
+          "429": {
+            "description": "Rate limited"
+          }
+        }
+      }
+    },
+    "/api/x-research": {
+      "get": {
+        "summary": "Browse or retrieve published X Research reports",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search by report ID, project name, or contract."
+          },
+          {
+            "name": "report",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "description": "Retrieve one published report by ID."
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Published report or paginated report list."
+          },
+          "404": {
+            "description": "Requested report is unavailable."
+          }
+        }
+      }
+    }
+  }
+}

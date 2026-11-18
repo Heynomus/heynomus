@@ -1,52 +1,60 @@
-<p align="center"><img src="assets/heynomus-symbol.png" alt="Heynomus" width="88" /></p>
+<p align="center"><img src="public/brand/heynomus-symbol.png" alt="Heynomus" width="88" /></p>
 
 <h1 align="center">Heynomus</h1>
 <p align="center">The public record of building on Robinhood Chain.</p>
-<p align="center"><a href="https://heynomus.xyz">Website</a> · <a href="https://x.com/heynomus">X</a></p>
+<p align="center"><a href="https://heynomus.xyz">Open the app</a> · <a href="https://x.com/heynomus">X</a> · <a href="https://heynomus.xyz/x-research">X Research</a></p>
 
-Heynomus helps you understand what projects are building, what changed, and which evidence supports the story.
+Heynomus brings project discovery, development activity, source-backed research, and your personal workspace together. Follow what projects are building, inspect what changed, and open the evidence behind each observation.
 
-Explore projects, follow development activity, inspect their public records, and keep your research together in one workspace.
+This repository contains selected application interface source and public product references.
 
-## Explore the product
+## Inside the app
 
 | Feature | What you can do |
 | --- | --- |
-| Project explorer | Discover projects and follow their official sources. |
+| Project explorer | Search projects by name, ticker, or contract and browse narratives. |
+| Project records | Inspect official links, dated evidence, development activity, contracts, and available market context. |
 | Builder radar | Find projects with recorded development activity. |
-| Latest ships | Follow releases and other counted development events. |
-| What changed | See changes in a project's collected public record. |
-| Project research | Read source-backed observations, dates, and open questions. |
-| Compare projects | View multiple project records side by side. |
-| Your workspace | Save projects and keep private research notes. |
-| Research terminal | Ask project questions with public evidence as context. |
+| Latest ships & changes | Follow counted development events and changes in the public record. |
+| Compare | Read several project records side by side. |
+| Personal workspace | Save projects, write private notes, and manage your account. |
+| Research terminal | Ask project questions and inspect the cited public evidence. |
+| X Research · Live | Mention @heynomus to request a project check and read its public report. |
 
-## Start researching
+## X Research is live
 
-1. Open [heynomus.xyz](https://heynomus.xyz).
-2. Find a project by its name, ticker, or contract address.
-3. Read the project record and follow its original sources.
-4. Compare the evidence and check what remains unknown.
-5. Sign in to keep your watchlist and research together.
+Reply beneath a project post with:
 
-## X Research · Coming soon
+> @heynomus check this project
 
-We are preparing project research requests directly on X. Mention Heynomus beneath a project post to request a concise check, with the full public record available on the website.
+Include the exact Robinhood Chain contract or the official website so the project can be identified. Completed checks receive a concise reply linking to a public report with evidence, source dates, and open questions.
 
-Follow [@heynomus](https://x.com/heynomus) for availability updates.
+Read the reports at [heynomus.xyz/x-research](https://heynomus.xyz/x-research). Public requests produce public reports. Use `@heynomus stop` to opt out or `@heynomus start` to resume.
+
+## Application source
+
+| Directory | Contents |
+| --- | --- |
+| [app/](app) | Application routes, layout, responsive styles, and error pages. |
+| [components/](components) | Research workspace, project views, compare, watchlist, AI chat, X reports, and Privy sign-in interface. |
+| [lib/](lib) | Browser API client, shared project types, and display helpers. |
+| [public/](public) | Brand assets, font license, public API specification, and research-agent instructions. |
+| [docs/](docs) | Product guide, research approach, X Research guide, and source map. |
+
+The interface uses Heynomus services for research data and account features. The complete hosted product is available at [heynomus.xyz](https://heynomus.xyz); this repository publishes a selected frontend, not the service implementation.
 
 ## How we approach research
 
 - **Evidence first:** observations link back to public sources.
 - **Dates matter:** a record describes what was observed and when.
-- **Identity matters:** a matching name or ticker does not establish a project's identity.
-- **Gaps stay visible:** missing measurements are not treated as zero.
+- **Identity matters:** a name or ticker alone does not establish project identity.
+- **Gaps stay visible:** missing measurements stay unknown.
 - **Activity needs context:** a token launch, a code change, and a shipped product are different events.
 
 ## Learn more
 
 - [Product guide](docs/PRODUCT.md)
+- [X Research](docs/X-RESEARCH.md)
 - [Research approach](docs/RESEARCH.md)
+- [Source map](docs/SOURCE.md)
 - [Frequently asked questions](docs/FAQ.md)
-
-This repository introduces the Heynomus product and its research approach.

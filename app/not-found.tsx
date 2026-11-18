@@ -1,0 +1,1 @@
+export default function NotFound(){return <main style={{padding:'15vh 10vw',fontFamily:'sans-serif'}}><p>HEYNOMUS / 404</p><h1>This page isn’t in the record.</h1><p><a href="/explore">Return to the project index →</a></p></main>;}

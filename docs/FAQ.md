@@ -14,28 +14,28 @@ A counted development event observed through an associated public source. Read t
 
 ## Does a token launch prove a working product?
 
-No. A token launch and a functioning product are different observations. Project research considers the evidence available for each.
+No. A token launch and a functioning product are different observations. Research considers the evidence available for each.
 
 ## Why is some information unknown?
 
-A source may be missing, unavailable, delayed, or only partially covered. Heynomus keeps those gaps visible.
-
-## Why should I check the source date?
-
-An observation reflects the evidence available when it was collected. A recent-looking project page can still contain older source records, so the dates matter.
+A source may be missing, unavailable, delayed, or partially covered. Those gaps remain visible alongside source dates.
 
 ## Do I need an account?
 
-You can browse public research without an account. Sign in to use your personal watchlist and research notes.
-
-## Can I submit my project?
-
-Yes. Use **Submit project** on the website and provide official links and relevant context. Submissions are reviewed before publication.
+Public research can be browsed without an account. Google, email, and wallet sign-in through Privy connect your personal watchlist and notes.
 
 ## Is X Research available?
 
-It is being prepared. Follow [@heynomus](https://x.com/heynomus) for availability updates.
+Yes, X Research is live. Reply beneath a project post with `@heynomus check this project` and include its official website or exact Robinhood Chain contract. Completed checks receive a reply linking to a public report.
 
-## Where can I use Heynomus?
+## Can I submit my project?
+
+Yes. Use **Submit project** on the website and provide official links and context. Submissions are reviewed before publication.
+
+## What source is in this repository?
+
+Selected application interface code: workspace pages, project views, comparisons, watchlists, AI chat, sign-in, and the X Research report viewer. See the [source map](SOURCE.md).
+
+## Where can I use the complete product?
 
 Visit [heynomus.xyz](https://heynomus.xyz).
