@@ -375,6 +375,42 @@
           }
         }
       }
+    },
+    "/api/token": {
+      "get": {
+        "summary": "Read the official NOMUS contract announcement",
+        "responses": {
+          "200": {
+            "description": "NOMUS ticker, Robinhood Chain ID, and a contract address or null when unannounced.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "symbol": {
+                      "type": "string",
+                      "enum": [
+                        "NOMUS"
+                      ]
+                    },
+                    "chainId": {
+                      "type": "integer",
+                      "enum": [
+                        4663
+                      ]
+                    },
+                    "contractAddress": {
+                      "type": "string",
+                      "nullable": true,
+                      "pattern": "^0x[0-9a-fA-F]{40}$"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

@@ -8,6 +8,8 @@ This repository shares selected frontend source from Heynomus. The interface is 
 | [app/[...path]/page.tsx](../app/[...path]/page.tsx) | Product routes and project records. |
 | [app/globals.css](../app/globals.css) | Workspace styling and responsive layout. |
 | [components/research-app.tsx](../components/research-app.tsx) | Sidebar, explorer, project views, radar, activity feeds, comparisons, watchlist, and research terminal. |
+| [components/social-links.tsx](../components/social-links.tsx) | Official GitHub and X account links. |
+| [components/token-strip.tsx](../components/token-strip.tsx) | $NOMUS contract strip, explorer link, and copy control. |
 | [components/ai-research.tsx](../components/ai-research.tsx) | Project questions, conversations, and cited answers. |
 | [components/x-research-page.tsx](../components/x-research-page.tsx) | Public X report search, evidence, sources, and open questions. |
 | [components/auth-provider.tsx](../components/auth-provider.tsx) | Account context and sign-in interface. |

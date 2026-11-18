@@ -8,6 +8,8 @@ import AiResearch from './ai-research';
 import Information from './info-pages';
 import AccountPage from './account-page';
 import XResearchPage from './x-research-page';
+import SocialLinks from './social-links';
+import TokenStrip from './token-strip';
 import {type Data,type Project,num,money,ago,date,label,short,safeUrl} from '@/lib/types';
 
 type AppContextType={saved:Data[];toggle:(p:Project)=>Promise<void>;notify:(s:string)=>void;refreshSaved:()=>void};
@@ -116,14 +118,15 @@ export default function ResearchApp({page='home',slug}:{page?:string;slug?:strin
         <div className="sidebar-bottom"><div className="sidebar-account"><AccountButton/>{identity.authenticated&&<a href="/account">Manage workspace<ArrowUpRight size={10}/></a>}</div><a href="/methodology" aria-current={page==='methodology'?'page':undefined}><BookOpen size={16}/>Methodology<ArrowUpRight size={12}/></a><a href="/developers" aria-current={page==='developers'?'page':undefined}><Command size={16}/>Developers<ArrowUpRight size={12}/></a><a className="sidebar-network" href="/status"><span className="network-icon"><ArrowUpRight size={19}/></span><div>Robinhood Chain<small>Mainnet · 4663</small></div><ArrowUpRight size={12}/></a></div>
       </aside>
       <div className="workspace-body">
+      <TokenStrip/>
       <header className="workspace-topbar">
         <div className="topbar-left"><button className="icon-btn mobile-menu-button" aria-expanded={menuOpen} aria-controls="workspace-navigation" aria-label="Open navigation" onClick={()=>setMenuOpen(true)}><PanelLeftOpen size={20}/></button><a href="/" className="mobile-brand"><img src="/brand/heynomus-symbol.png" alt=""/>heynomus</a><span className="workspace-crumb">Research workspace <span>/</span><strong>{page==='project'?slug?.replaceAll('-',' '):page==='home'?'Overview':label(page)}</strong></span></div>
-        <div className="masthead-actions"><a href="/status" className="chain-pill"><span className="chain-glyph"><ArrowUpRight size={15}/></span>Robinhood Chain</a><a className="icon-btn x-icon" href="https://x.com/intent/post?text=Explore%20the%20public%20record%20of%20building%20with%20Heynomus" target="_blank" rel="noopener noreferrer" aria-label="Share Heynomus on X">𝕏</a><a className="btn dark small submit-top" href="/submit"><Plus size={14}/><span>Submit project</span></a></div>
+        <div className="masthead-actions"><a href="/status" className="chain-pill"><span className="chain-glyph"><ArrowUpRight size={15}/></span>Robinhood Chain</a><SocialLinks/><a className="btn dark small submit-top" href="/submit"><Plus size={14}/><span>Submit project</span></a></div>
       </header>
       <main id="content" className={'main-content '+(page==='home'?'dashboard-content':'')}>
         {page==='home'?<Home/>:page==='explore'?<Explore/>:page==='project'?<ProjectPage slug={slug!}/>:page==='builders'?<Radar/>:page==='ships'||page==='updates'?<RecordFeed mode={page}/>:page==='watchlist'?<LoginRequired><Watchlist/></LoginRequired>:page==='compare'?<Compare/>:page==='terminal'?<ResearchTerminal/>:page==='narratives'?<Narratives/>:page==='x-research'?<XResearchPage/>:page==='reports'?<Reports/>:page==='submit'?<LoginRequired><Submit/></LoginRequired>:page==='account'?<AccountPage/>:page==='status'?<SystemStatus/>:<Information page={page}/>}
       </main>
-      <footer><a href="/" className="footer-brand"><img src="/brand/heynomus-symbol.png" alt=""/>heynomus</a><span>Independent research on Robinhood Chain. Every observation has a source.</span><div><a href="/about">About</a><a href="/methodology">Methodology</a><a href="/status">Status</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/feed.xml" aria-label="RSS feed"><Rss size={14}/></a></div></footer>
+      <footer><a href="/" className="footer-brand"><img src="/brand/heynomus-symbol.png" alt=""/>heynomus</a><span>Independent research on Robinhood Chain. Every observation has a source.</span><div className="footer-links"><SocialLinks/><a href="/about">About</a><a href="/methodology">Methodology</a><a href="/status">Status</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/feed.xml" aria-label="RSS feed"><Rss size={14}/></a></div></footer>
       </div>
     </div>
     {toast&&<div className="toast" role="status"><CheckCircle2 size={17}/><span>{toast}</span><button onClick={()=>setToast('')} aria-label="Dismiss notification"><X size={14}/></button></div>}

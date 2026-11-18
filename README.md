@@ -19,6 +19,7 @@ This repository contains selected application interface source and public produc
 | Compare | Read several project records side by side. |
 | Personal workspace | Save projects, write private notes, and manage your account. |
 | Research terminal | Ask project questions and inspect the cited public evidence. |
+| $NOMUS contract strip | Find the official contract address once announced. |
 | X Research · Live | Mention @heynomus to request a project check and read its public report. |
 
 ## X Research is live
